@@ -32,12 +32,31 @@
                   <option value="minor">Minorenne</option>
                   <option value="senior">Senior >65</option>
                 </select>
-                <label for="age-request">Seleziona gruppo d'età.</label>
+                <label for="age-request">Seleziona fascia d'età.</label>
               </div>
             </div>
         </div>
         <button id="button" class="btn btn-primary my-3">Calcola</button>
-        
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-header h2">
+              IL TUO BIGLIETTO
+            </div>
+            <div class="card-body">
+                <div class="container g-4">
+                    <div class="row my-5">
+                      <div class="col-sm-8 text-start">Abbiamo calcolato il tuo biglietto in base ai dati da te forniti.</div>
+                      <div id="ticket-cost" class="col-sm-4"> </div>
+                    </div>
+                    <div class="row">
+                      <div id="wagon" class="col-sm">Carrozza </div>
+                      <div id="ticket-number" class="col-sm">Numero CP</div>
+                      <div id="saved" class="col-sm"></div>
+                    </div>
+                  </div>
+            </div>
+          </div>
     </div>
 </body>
 </html>
