@@ -5,6 +5,7 @@ const totalCost = document.getElementById('ticket-cost');
 const userSaved = document.getElementById('saved');
 const userTicketNumber = document.getElementById('ticket-number');
 const userWagon = document.getElementById('wagon');
+const ticketSimulator = document.getElementById('ticket-simulator');
 
 
 // COSTO PER CHILOMETRO
@@ -48,3 +49,24 @@ button.addEventListener('click', function(){
     }
     
 })
+
+ // RENDO VISIBILE IL BIGLIETTO SOLO AL CLICK 
+button.addEventListener('click', function(){
+ticketSimulator.classList.remove('d-none');
+ticketSimulator.classList.add('d-block');
+})
+
+// RANDOMIZZO CABINA
+button.addEventListener('click', function(){
+    const random = Math.random();
+    const max = 12;
+    result = Math.floor(random * max) + 1;
+    userWagon.innerText = 'Cabina N.' + result;})
+
+// RANDOMIZZO CODICE BIGLIETTO
+button.addEventListener('click', function(){
+    const random = Math.random();
+    const min = 1999;
+    const max = 9999;
+    result = Math.floor(random * (max + 1 - min)) + min;
+    userTicketNumber.innerText = 'Codice CP ' + result;})
