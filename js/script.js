@@ -1,8 +1,8 @@
 console.log('JS OK') 
 
-// RECUPERO ELEMENTO
+// RECUPERO ELEMENTI
 const totalCost = document.getElementById('ticket-cost');
-console.log(totalCost);
+
 
 // COSTO PER CHILOMETRO
 const ticketCostKM = 0.21.toFixed(2);
@@ -15,25 +15,29 @@ const seniorDiscount = (40/100);
 
 
 // RICHIESTA INFORMAZIONI (CHILOMETRI E ETA')
-const distanceRequired = parseInt(prompt('Quanti chilometri vuoi percorrere?', 100));
-const userAge = parseInt(prompt('Quanti anni hai?', 17));
+const distanceRequired = document.getElementById('km-request');
+const userAge = document.getElementById('age-request');
+const button = document.getElementById('button')
 
-// COSTO BIGLIETTO SENZA SCONTI
-const totalPrice = distanceRequired * ticketCostKM;
-console.log(`€ ${totalPrice.toFixed(2)}`);
-totalCost.innerText = '€' + totalPrice.toFixed(2);
-
-// CALCOLO COSTO BIGLIETTO AL NETTO DELLO SCONTO
-
-if (userAge < 18 ) {
-    let minorNetDiscount = (totalPrice * minorDiscount);
-    let minorTotalPrice = totalPrice - minorNetDiscount;
-    console.log(`€${minorTotalPrice.toFixed(2)}`);
-    totalCost.innerText = '€' + minorTotalPrice.toFixed(2);
-}
-else if (userAge > 65 ) {
-    let seniorNetDiscount = (totalPrice * seniorDiscount);
-    let seniorTotalPrice = totalPrice - seniorNetDiscount;
-    console.log(`€${seniorTotalPrice.toFixed(2)}`);
-    totalCost.innerText = '€' + seniorTotalPrice.toFixed(2);
-}
+// FUNZIONE DEL CALCOLO AL CLICK
+button.addEventListener('click', function(){
+    const distance = parseInt(distanceRequired.value);
+    const age = (userAge.value);
+    // COSTO BIGLIETTO SENZA SCONTI
+    const totalPrice = distance * ticketCostKM;
+    console.log(`€ ${totalPrice.toFixed(2)}`);
+    
+    // CALCOLO COSTO BIGLIETTO AL NETTO DELLO SCONTO
+    
+    if (age === 'minor') {
+        let minorNetDiscount = (totalPrice * minorDiscount);
+        let minorTotalPrice = totalPrice - minorNetDiscount;
+        console.log(`€${minorTotalPrice.toFixed(2)}`);
+    }
+    else if (age === 'senior' ) {
+        let seniorNetDiscount = (totalPrice * seniorDiscount);
+        let seniorTotalPrice = totalPrice - seniorNetDiscount;
+        console.log(`€${seniorTotalPrice.toFixed(2)}`);
+    }
+    
+})

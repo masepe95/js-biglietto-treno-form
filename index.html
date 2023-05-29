@@ -22,20 +22,21 @@
         <div class="row g-2">
             <div class="col-md">
               <div class="form-control">
-                <input type="text" class="form-control" id="km-request" placeholder="Quanti chilometri vuoi percorrere?" value="">
+                <input type="number" class="form-control" id="km-request" placeholder="Quanti chilometri vuoi percorrere?" value="">
               </div>
             </div>
             <div class="col-md">
               <div class="form-floating">
                 <select class="form-select" id="age-request" aria-label="Floating label select example">
-                  <option selected>Maggiorenne</option>
+                  <option value="normal">Maggiorenne</option>
                   <option value="minor">Minorenne</option>
                   <option value="senior">Senior >65</option>
                 </select>
                 <label for="age-request">Seleziona gruppo d'età.</label>
               </div>
             </div>
-          </div>
+        </div>
+        <button id="button" class="btn btn-primary my-3">Calcola</button>
         
     </div>
 </body>
