@@ -5,6 +5,7 @@
 3. **Dichiaro sconti per minorenni e senior.**
 3. **Richiedo numero di chilometri nel campo designato nel DOM.**
 4. **Richiedo età nel campo designato nel DOM.**
+5.  **Richiedo nome nel campo designato nel DOM.**
 4. **Dichiaro che il calcolo iniziano al click del bottone designato.**
 5. **Calcolo costo del biglietto senza sconto.**
 5. **Se minorenne calcolo il costo del percorso con il 20% di sconto..**

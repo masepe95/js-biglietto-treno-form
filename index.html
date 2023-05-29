@@ -22,7 +22,7 @@
         <div class="row g-2">
             <div class="col-md">
               <div class="form-control">
-                <input type="number" class="form-control" id="km-request" placeholder="Quanti chilometri vuoi percorrere?" value="">
+                <input type="number" class="form-control border-0" id="km-request" placeholder="Quanti chilometri vuoi percorrere?" value="">
               </div>
             </div>
             <div class="col-md">
@@ -36,6 +36,9 @@
               </div>
             </div>
         </div>
+        <div class="form-control my-2">
+          <input type="text" class="form-control border-0" id="user-name" placeholder="Qual'è il tuo nome?" value="">
+        </div>
         <button id="button" class="btn btn-primary my-3">Calcola</button>
     </div>
     <div id="ticket-simulator" class="container d-none">
@@ -46,7 +49,7 @@
             <div class="card-body">
                 <div class="container g-4">
                     <div class="row my-5">
-                      <div class="col-sm-8">Complimenti! Hai calcolato il costo del tuo biglietto.</div>
+                      <div id="name-placeholder" class="col-sm-8">Complimenti! Hai calcolato il costo del tuo biglietto.</div>
                       <div id="ticket-cost" class="col-sm-4"> </div>
                     </div>
                     <div class="row">

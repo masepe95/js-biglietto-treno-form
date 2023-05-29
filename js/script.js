@@ -6,6 +6,8 @@ const userSaved = document.getElementById('saved');
 const userTicketNumber = document.getElementById('ticket-number');
 const userWagon = document.getElementById('wagon');
 const ticketSimulator = document.getElementById('ticket-simulator');
+const userName = document.getElementById('user-name');
+const namePlaceholder = document.getElementById('name-placeholder')
 
 
 // COSTO PER CHILOMETRO
@@ -70,3 +72,10 @@ button.addEventListener('click', function(){
     const max = 9999;
     result = Math.floor(random * (max + 1 - min)) + min;
     userTicketNumber.innerText = 'Codice CP ' + result;})
+
+// NOME UTENTE
+button.addEventListener('click', function(){
+    const name = userName.value;
+    namePlaceholder.innerText = `Ciao ${name}, grazie per aver inserito i dati.`})
+
+
